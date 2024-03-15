@@ -1,15 +1,15 @@
-import "./input.css"
+import "./input.css";
 
-const Input =({resultt, texttt})=> {
+const Input =({result, text})=> {
     return (
     <div className="inputwrapper">
         <div className="result">
-            <h1>{resultt}</h1>
+            <h1>{result}</h1>
         </div>
 
 
         <div className="Texxxt">
-            <h2>{texttt}</h2>
+            <h2>{text}</h2>
         </div>
     </div>);
 }; 

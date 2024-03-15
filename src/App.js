@@ -6,14 +6,15 @@ import * as math from "mathjs";
 
 
 const App = () => {
-  const [texttt, setText] = useState("KEKEKEKKEEKKEKEK"); //string 
-  const [resultt, setResult] = useState("LMAOAOAOAOAO");
+  const [text, setText] = useState(""); //string 
+  const [result, setResult] = useState("");
   const addToTextttt = (val) => {
-    setText((texttt) => texttt + val);
+    setText((text) => [...text,  val+" "]);
   };
 
   const calccculate = () => {
-    setResult(math.evaluate(texttt));
+    const input = text.joiin("");
+    setResult(math.evaluate(input));
   };
   const resetInput =() => {
     setText("");
@@ -26,7 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="wrappppper">
-        <Input texttt={texttt} resultt={resultt} />
+        <Input text={text} result={result} />
         <div className="rowww">
          <Buttonn symbol = "8" handleClick={addToTextttt}/>
          <Buttonn symbol = "2"handleClick={addToTextttt}/>

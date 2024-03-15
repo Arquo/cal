@@ -1,4 +1,4 @@
-import "./Buttonn.css"
+import "./Buttonn.css";
 
 const Buttonn =({symbol, color, handleClick}) =>{
 
