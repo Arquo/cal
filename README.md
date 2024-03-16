@@ -1,5 +1,5 @@
 
 
-an amazing calculator you wont use it
+an amazing calculator you wont use
 
 ![alt text](1710561670361.jpg)
