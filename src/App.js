@@ -6,16 +6,26 @@ import * as math from "mathjs";
 
 
 const App = () => {
-  const [text, setText] = useState(""); //string 
-  const [result, setResult] = useState("");
-  const addToTextttt = (val) => {
-    setText((text) => [...text,  val+" "]);
-  };
 
+ 
+  const [result, setResult] = useState("");   
+  const [text, setText] = useState("");   
+     // state variable, declared with "useState", 
+     // text(current state value): is initialized with "", 
+     // setText(function) : allow us to update state value
+
+   // "..." spreads string to char and add val at the end. [] puts everything back, in to an array
+  const addToTextttt = (val) => {
+    setText((text) => [...text,  val ]);
+  };   
+
+  // text is an array
   const calccculate = () => {
-    const input = text.joiin("");
+    const input = text.join("");
     setResult(math.evaluate(input));
   };
+
+  //reset
   const resetInput =() => {
     setText("");
     setResult("");
@@ -24,11 +34,19 @@ const App = () => {
   const somecolor = "#38AFBB";
 
 
+ // onClick={() => handleClick(symbol)}, when botton is clicked, 
+ // handleClick={addToTextttt},  {addToTextttt} function is assigned to handleClick
+ // handleClick(symbol) is now addToTextttt(symbol ), which takes botton symbol value, and add to text
+ // WOWOWOWOOWOWOW
+
+ // also no space for number so, "_X_" for operators
+
   return (
     <div className="App">
       <div className="wrappppper">
         <Input text={text} result={result} />
         <div className="rowww">
+         
          <Buttonn symbol = "8" handleClick={addToTextttt}/>
          <Buttonn symbol = "2"handleClick={addToTextttt}/>
          <Buttonn symbol = "3"handleClick={addToTextttt}/>
